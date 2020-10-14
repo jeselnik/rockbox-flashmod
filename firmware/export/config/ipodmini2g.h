@@ -114,7 +114,10 @@
 
 /* define this if you have a disk storage, i.e. something
    that needs spinups and can cause skips when shaked */
-#define HAVE_DISK_STORAGE
+//#define HAVE_DISK_STORAGE
+
+/* Change to flash storage */
+#define HAVE_FLASH_STORAGE
 
 /* Define this for LCD backlight available */
 #define HAVE_BACKLIGHT
@@ -170,7 +173,8 @@
 #define CONFIG_I2C I2C_PP5020
 
 /* We're able to shut off power to the HDD */
-#define HAVE_ATA_POWER_OFF
+/* Breaks CF Cards */
+//#define HAVE_ATA_POWER_OFF
 
 /* define this if the hardware can be powered off while charging */
 /*#define HAVE_POWEROFF_WHILE_CHARGING */
