@@ -5,6 +5,40 @@
      Firmware   |____|_  /\____/ \___  >__|_ \|___  /\____/__/\_ \
                        \/            \/     \/    \/            \/
 
+----------FLASHMOD INFO----------
+These builds of Rockbox have been modified to increase compatibility
+with SD to Compact Flash adapters commonly used for iPod repair.
+
+Downloads can be found in releases. The zips provided only contain
+base firmware and not fonts/games; Download those from the utility
+or the Rockbox site.
+
+Two options were changed in these builds.
+
+- HAVE_DISK_STORAGE to HAVE_FLASH_STORAGE
+
+- HAVE_ATA_POWER_OFF disabled.
+
+With Rockbox in a mature state any further updates will be at
+new point releases.
+
+It's likely problems with the CF adapter's interpretation of disk
+spindown and power off commands cause the firmware to panic.
+If I were to bet I'd say the "generic"/cheapo CF adapters don't
+implement the ATA spec fully/perfectly. More expensive adapters/
+real CF cards probably return success to any spinning disk related
+commands.
+
+Special thanks to a Reddit user going by "RattletraPM" whose comments
+I found on a long ddg search for these solutions and spelt out what
+options to change. I'm just building them :)
+
+----BUGS----
+- Battery indicator only updates at boot
+- (!) Database doesn't save (Reported in a reddit thread, can't 
+        reproduce)
+
+----------ORIGINAL README----------
 Build Your Own Rockbox
 
 1. Clone 'rockbox' from git (or extract a downloaded archive).
